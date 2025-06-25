@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pioneering New Frontiers in Human-AI Creativity | CMU HCI Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .aspect-w-16.aspect-h-9 {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .aspect-w-16.aspect-h-9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-[350px] md:min-h-[450px] flex items-center justify-center overflow-hidden">
+        <img src="banner_creativity.png" alt="Creativity and AI research banner" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: center;">
+        <div class="absolute inset-0 bg-white bg-opacity-90 z-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-20">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight text-gray-900 drop-shadow-md">
+                    Pioneering New Frontiers in 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Human-AI Creativity</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow">
+                    We are exploring how artificial intelligence can act as a creative partner, augmenting human intellect to help us discover novel ideas, solve complex problems, and break through creative blocks.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#biospark" class="bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-800 transition-all duration-300 shadow-lg">
+                        Explore Our Projects
+                    </a>
+                    <a href="#get-involved" class="border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition-all duration-300">
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-20 md:py-32">
+        <div class="container mx-auto px-6 max-w-6xl">
+
+            <!-- BioSpark Section -->
+            <section id="biospark" class="mb-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            BioSpark: 
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Nature-Inspired Innovation</span>
+                        </h2>
+                        <div class="space-y-4 text-lg text-gray-600 leading-relaxed">
+                            <p>
+                                How can a woodpecker's skull help us design better helmets? The natural world is full of ingenious solutions to complex challenges, but they are often hidden in unrelated fields.
+                            </p>
+                            <p>
+                                BioSpark is an AI-powered tool that helps inventors and engineers overcome this barrier by suggesting surprising analogies from biology, helping break "design fixation"—the tendency to get stuck on familiar but suboptimal solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <div class="aspect-w-16 aspect-h-9 shadow-2xl">
+                            <iframe src="https://www.youtube.com/embed/Pb9a-50036k" title="BioSpark Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider my-16"></div>
+
+            <!-- Inkspire Section -->
+            <section id="inkspire" class="mb-32">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2 space-y-6">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            Inkspire: 
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Sketching with a Co-Creative AI</span>
+                        </h2>
+                        <div class="space-y-4 text-lg text-gray-600 leading-relaxed">
+                            <p>
+                                For a designer, the initial spark of an idea is just the beginning. The journey from a rough sketch to a refined concept involves countless iterations.
+                            </p>
+                            <p>
+                                Inkspire is a creative partner that accelerates this exploration. A designer provides a simple sketch, and Inkspire generates a diverse range of visual ideas that build on the original concept, allowing for rapid prototyping while maintaining the designer's unique authorial voice.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:order-1 card-hover">
+                        <div class="aspect-w-16 aspect-h-9 shadow-2xl">
+                            <iframe src="https://www.youtube.com/embed/oPVK45bB_6c" title="Inkspire Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider my-16"></div>
+            
+            <!-- Philosophy Section -->
+            <section id="philosophy" class="mb-32">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
+                        <span class="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
+                        Our Core Principle
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+                        Human-Centered by Design
+                    </h2>
+                    <div class="bg-white rounded-2xl shadow-xl p-12 md:p-16 border border-gray-100">
+                        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+                            Our research is guided by a core principle: <span class="font-semibold text-gray-900">the human creator must remain in control.</span>
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            These tools are designed to be trusted collaborators that provide inspiration and expand possibilities, while ensuring the user directs the creative process and maintains full ownership of the final outcome. We believe the future of creativity lies in this powerful synergy between human and machine.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section id="get-involved" class="py-16 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                        Shape the Future of Creativity With Us
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+                        We are actively seeking academic and industry partners, as well as creative professionals willing to participate in user studies. If you are interested in exploring the potential of human-AI collaboration, we would love to hear from you.
+                    </p>
+                    <!-- Embedded EmailOctopus Form -->
+                    <div class="max-w-xl mx-auto">
+                        <script async src="https://eocampaign1.com/form/947d9a98-5203-11f0-8d15-55991deea08f.js" data-form="947d9a98-5203-11f0-8d15-55991deea08f"></script>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12" style="background-color: #981b1d;">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <p class="text-center text-gray-100 text-lg font-medium mb-6">
+                A research initiative by the Human-Computer Interaction Institute at Carnegie Mellon University.
+            </p>
+            <div class="flex items-center justify-center space-x-8">
+                <div class="bg-white p-2 rounded-md flex items-center justify-center">
+                    <img src="cmu-wordmark-stacked-r.png" alt="Carnegie Mellon University" class="h-14">
+                </div>
+                <div class="bg-white p-2 rounded-md flex items-center justify-center">
+                    <img src="hcii-logo.png" alt="Human-Computer Interaction Institute" class="h-14">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

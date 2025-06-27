@@ -44,6 +44,45 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
         }
+        @keyframes fadein {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadein {
+            animation: fadein 0.8s cubic-bezier(0.4,0,0.2,1);
+        }
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm select,
+        #contactForm textarea {
+            background: #f8fafc;
+            border: 1.5px solid #e0e7ef;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        #contactForm input:focus,
+        #contactForm select:focus,
+        #contactForm textarea:focus {
+            border-color: #a78bfa;
+            box-shadow: 0 0 0 2px #a78bfa33;
+            background: #fff;
+        }
+        #contactForm button[type="submit"] {
+            background: linear-gradient(90deg, #6366f1 0%, #a21caf 100%);
+            box-shadow: 0 4px 24px 0 #a78bfa33;
+            font-size: 1.15rem;
+            letter-spacing: 0.01em;
+        }
+        #contactForm button[type="submit"]:hover {
+            background: linear-gradient(90deg, #a21caf 0%, #6366f1 100%);
+            box-shadow: 0 6px 32px 0 #a78bfa55;
+            transform: scale(1.03);
+        }
+        #contactForm label {
+            font-weight: 500;
+        }
+        .max-w-2xl {
+            overflow: visible;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -159,9 +198,107 @@
                     <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
                         We are actively seeking academic and industry partners, as well as creative professionals willing to participate in user studies. If you are interested in exploring the potential of human-AI collaboration, we would love to hear from you.
                     </p>
-                    <!-- Embedded EmailOctopus Form -->
-                    <div class="max-w-xl mx-auto">
-                        <script async src="https://eocampaign1.com/form/55cdff98-520a-11f0-aaff-b379f1b2773b.js" data-form="55cdff98-520a-11f0-aaff-b379f1b2773b"></script>
+                    <!-- Custom Contact Form -->
+                    <div class="max-w-2xl mx-auto">
+                        <div class="relative bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-visible animate-fadein pb-16">
+                            <div class="h-2 w-full bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 mb-6"></div>
+                            <h3 class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-700 to-pink-600 text-center mb-8 mt-2">Get Involved</h3>
+                            <form id="contactForm" class="space-y-6 px-8 pb-10">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="text-left">
+                                        <label for="first_name" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                        <input type="text" id="first_name" name="first_name" required 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                               placeholder="Enter your first name">
+                                    </div>
+                                    <div class="text-left">
+                                        <label for="last_name" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                        <input type="text" id="last_name" name="last_name" required 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                               placeholder="Enter your last name">
+                                    </div>
+                                </div>
+                                <div class="text-left">
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                           placeholder="Enter your email address">
+                                </div>
+                                <div class="text-left">
+                                    <label for="affiliation" class="block text-sm font-medium text-gray-700 mb-2">Your Affiliation</label>
+                                    <input type="text" id="affiliation" name="affiliation" 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                           placeholder="e.g. Carnegie Mellon University, Acme Corp, etc.">
+                                </div>
+                                <div class="text-left">
+                                    <label for="org_type" class="block text-sm font-medium text-gray-700 mb-2">Organization Type</label>
+                                    <select id="org_type" name="org_type" 
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                                        <option value="">Select an option</option>
+                                        <option value="Academic">Academic</option>
+                                        <option value="Industry">Industry</option>
+                                        <option value="Non-profit">Non-profit</option>
+                                        <option value="Government">Government</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="text-left">
+                                    <label class="block text-sm font-medium text-gray-700 mb-4">What are you interested in? *</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="interests" value="Request a demo" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                            <span class="text-sm text-gray-700">Request a demo</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="interests" value="Participate in user studies / Early access to tools" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                            <span class="text-sm text-gray-700">Participate in user studies / Early access to tools</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="interests" value="Industry partnership" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                            <span class="text-sm text-gray-700">Industry partnership</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="interests" value="General inquiries" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                            <span class="text-sm text-gray-700">General inquiries</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="text-left">
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Additional Details (Optional)</label>
+                                    <textarea id="message" name="message" rows="4" 
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                              placeholder="Tell us more about your interests or how you'd like to collaborate..."></textarea>
+                                </div>
+                                <button type="submit" 
+                                        class="w-full bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-300 shadow-lg transform hover:scale-105">
+                                    <span id="submitText">Submit</span>
+                                    <span id="loadingText" class="hidden">Submitting...</span>
+                                </button>
+                            </form>
+                            <!-- Success Message -->
+                            <div id="successMessage" class="hidden mt-8 p-6 bg-green-50 border border-green-200 rounded-lg mx-8 flex items-center gap-4">
+                                <svg class="w-8 h-8 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <div>
+                                    <div class="font-bold text-green-900 text-lg mb-1">Submitted! Thank you for your interest.</div>
+                                    <div class="text-green-700">We've received your submission and will get back to you soon.</div>
+                                </div>
+                            </div>
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="hidden mt-6 p-6 bg-red-50 border border-red-200 rounded-lg mx-8">
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-red-800">Submission Failed</h3>
+                                        <p class="text-red-700">Please try again or contact us directly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -185,6 +322,137 @@
             </div>
         </div>
     </footer>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate that at least one checkbox is selected
+            const checkboxes = document.querySelectorAll('input[name="interests"]:checked');
+            if (checkboxes.length === 0) {
+                alert('Please select at least one interest area.');
+                return;
+            }
+
+            // Get form elements
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submitText');
+            const loadingText = document.getElementById('loadingText');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Hide any existing messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitText.classList.add('hidden');
+            loadingText.classList.remove('hidden');
+            
+            // Collect all selected checkbox values
+            const selectedInterests = Array.from(checkboxes).map(cb => cb.value).join(', ');
+            
+            // Create form data with all selected interests
+            const formData = new FormData(form);
+            
+            // Remove the individual checkbox entries and add the combined interests
+            formData.delete('interests');
+            formData.append('interests', selectedInterests);
+            
+            // Create a hidden iframe for form submission
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.name = 'submitFrame';
+            document.body.appendChild(iframe);
+            
+            // Set form target to iframe
+            form.target = 'submitFrame';
+            form.action = 'https://script.google.com/macros/s/AKfycbwplhNXrou6JYRpL740TFraBy3kg7olOMXC2_12UXG47ySPQXyp0ahtLAso712H9_yb/exec';
+            form.method = 'POST';
+            
+            // Handle iframe load event
+            iframe.onload = function() {
+                // Show success message
+                successMessage.classList.remove('hidden');
+                
+                // Disable all form fields and the submit button
+                Array.from(form.elements).forEach(function(el) {
+                    el.disabled = true;
+                });
+                // Change button text to 'Submitted'
+                submitBtn.querySelector('#submitText').textContent = 'Submitted';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset button state (not needed since button is disabled)
+                submitBtn.disabled = true;
+                submitText.classList.remove('hidden');
+                loadingText.classList.add('hidden');
+                
+                // Clean up iframe
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                }, 1000);
+            };
+            
+            // Handle iframe error
+            iframe.onerror = function() {
+                // Show error message
+                errorMessage.classList.remove('hidden');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset button state
+                submitBtn.disabled = false;
+                submitText.classList.remove('hidden');
+                loadingText.classList.add('hidden');
+                
+                // Clean up iframe
+                document.body.removeChild(iframe);
+            };
+            
+            // Submit the form with the modified data
+            // We need to manually submit the form data since we modified it
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // Show success message
+                        successMessage.classList.remove('hidden');
+                        
+                        // Disable all form fields and the submit button
+                        Array.from(form.elements).forEach(function(el) {
+                            el.disabled = true;
+                        });
+                        // Change button text to 'Submitted'
+                        submitBtn.querySelector('#submitText').textContent = 'Submitted';
+                        
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Reset button state (not needed since button is disabled)
+                        submitBtn.disabled = true;
+                        submitText.classList.remove('hidden');
+                        loadingText.classList.add('hidden');
+                    } else {
+                        // Show error message
+                        errorMessage.classList.remove('hidden');
+                        errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Reset button state
+                        submitBtn.disabled = false;
+                        submitText.classList.remove('hidden');
+                        loadingText.classList.add('hidden');
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
 
 </body>
 </html>

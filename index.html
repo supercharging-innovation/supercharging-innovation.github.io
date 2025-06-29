@@ -116,7 +116,7 @@
         <div class="absolute inset-0 bg-white bg-opacity-90 z-10"></div>
         <div class="container mx-auto px-6 text-center relative z-20">
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight text-gray-900 drop-shadow-md">
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 mt-8 leading-tight text-gray-900 drop-shadow-md">
                     Pioneering New Frontiers in 
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Human-AI Creativity</span>
                 </h1>
@@ -211,23 +211,42 @@
                     </div>
                 </div>
                 
-                <!-- Publications for Inkspire -->
-                <div class="mt-12 mb-8">
-                    <hr class="mb-6 border-t-2 border-purple-200">
-                    <h4 class="text-2xl font-extrabold text-purple-900 mb-4">Publications</h4>
-                    <div class="mb-4 space-y-2">
-                        <div>
-                            <span class="text-xl font-bold text-gray-900">Inkspire: Supporting Design Exploration with Generative AI through Analogical Sketching</span>
+                <!-- Video and Publications Side by Side -->
+                <div class="mt-12 mb-8 grid lg:grid-cols-2 gap-8 items-start">
+                    <!-- Publications for Inkspire -->
+                    <div>
+                        <hr class="mb-6 border-t-2 border-purple-200">
+                        <h4 class="text-2xl font-extrabold text-purple-900 mb-4">Publications</h4>
+                        <div class="mb-4 space-y-2">
+                            <div>
+                                <span class="text-xl font-bold text-gray-900">Inkspire: Supporting Design Exploration with Generative AI through Analogical Sketching</span>
+                            </div>
+                            <div>
+                                <span class="text-base text-gray-800">David Chuan-En Lin, Hyeonsu B Kang, Nikolas Martelaro, Aniket Kittur, Yan-Ying Chen, Matthew K Hong</span>
+                            </div>
+                            <div>
+                                <span class="text-base text-gray-800">ACM CHI 2025</span>
+                                <a href="https://dl.acm.org/doi/full/10.1145/3706598.3713397" target="_blank" rel="noopener" class="ml-3 text-purple-700 hover:text-purple-900 inline-flex items-center text-base font-semibold">
+                                    <i class="fas fa-file-alt mr-1"></i> Paper
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=ePASb6FF4FU&ab_channel=ACMSIGCHI" target="_blank" rel="noopener" class="ml-3 text-purple-700 hover:text-purple-900 inline-flex items-center text-base font-semibold">
+                                    <i class="fas fa-play mr-1"></i> Presentation
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <span class="text-base text-gray-800">David Chuan-En Lin, Hyeonsu B Kang, Nikolas Martelaro, Aniket Kittur, Yan-Ying Chen, Matthew K Hong</span>
-                        </div>
-                        <div>
-                            <span class="text-base text-gray-800">ACM CHI 2025</span>
-                            <a href="https://dl.acm.org/doi/full/10.1145/3706598.3713397" target="_blank" rel="noopener" class="ml-3 text-purple-700 hover:text-purple-900 inline-flex items-center text-base font-semibold">
-                                <i class="fas fa-file-alt mr-1"></i> Paper
-                            </a>
-                        </div>
+                    </div>
+                    
+                    <!-- Additional Inkspire Video -->
+                    <div class="flex justify-center lg:justify-end">
+                        <video 
+                            class="w-full max-w-md rounded-lg"
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline>
+                            <source src="videos/inkspire-scaffolding.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </section>
